@@ -20,15 +20,15 @@ body {
 
 :root {
   /*========== Colors ==========*/
-  --hue-color: 270;
+  --hue-color: 210;
   --lightness-black: 15%;
   --lightness-dark: 44%;
   --lightness-light: 92%;
-  --lightness-white: 99%;
+  --lightness-white: 100%;
 
   /* HSL color mode */
   --color-primary: hsl(var(--hue-color), 89%, 41%);
-  --color-white: hsl(0, 5, var(--lightness-white));
+  --color-white: hsl(0, 5%, var(--lightness-white));
   --color-black: hsl(var(--hue-color), 5%, var(--lightness-black));
   --color-dark: hsl(var(--hue-color), 5%, var(--lightness-dark));
   --color-light: hsl(var(--hue-color), 5%, var(--lightness-light));
@@ -92,7 +92,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--color-white);
-  transition: var(tra);
+  transition: var(--transition);
 }
 
 img {
@@ -101,10 +101,11 @@ img {
   height: auto;
   object-fit: cover;
 }
+
 .container {
   width: var(--container-width-lg);
   margin-inline: auto;
-  min-width: 1920px;
+  max-width: 1920px;
 }
 
 section {
@@ -180,6 +181,10 @@ section > p {
   }
 
   .container {
+    width: var(--container-width-md);
+  }
+
+  section {
     padding: 8rem 0;
   }
 

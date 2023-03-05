@@ -1,0 +1,44 @@
+nav {
+  width: 100vw;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  background: var(--color-primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2rem 1.5rem hsla(var(--hue-color), 68%, 42%, 20%);
+  transition: var(--transition);
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 5.5rem;
+  border-radius: var(--border-radius-3);
+  overflow: hidden;
+}
+
+.nav__menu {
+  display: flex;
+  gap: 3.5rem;
+}
+
+#theme__icon {
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__menu {
+    display: none;
+  }
+}
