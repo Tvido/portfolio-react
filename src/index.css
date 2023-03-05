@@ -51,6 +51,20 @@ body {
   --font-bold: 700;
 }
 
+.dark-theme {
+  --lightness-black: 95%;
+  --lightness-dark: 64%;
+  --lightness-light: 12%;
+  --lightness-white: 12%;
+
+  /* HSL color mode */
+  --color-primary: hsl(var(--hue-color), 9%, 1%);
+  --color-white: hsl(0, 5%, var(--lightness-white));
+  --color-black: hsl(var(--hue-color), 85%, var(--lightness-black));
+  --color-dark: hsl(var(--hue-color), 85%, var(--lightness-dark));
+  --color-light: hsl(var(--hue-color), 55%, var(--lightness-light));
+}
+
 h1,
 h2,
 h3,
