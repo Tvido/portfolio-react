@@ -19,7 +19,7 @@ nav {
 }
 
 .nav__logo {
-  width: 5.5rem;
+  width: 7.5rem;
   border-radius: var(--border-radius-3);
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ nav {
   border: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .nav__menu {
     display: none;
   }

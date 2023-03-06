@@ -4,27 +4,19 @@ import logo from "../../assets/img/logo.svg";
 import data from "./data";
 import { useEffect, useState } from "react";
 
-const getStorageTheme = () => {
-  let theme = "dark-theme";
-  if (localStorage.getItem("theme")) {
-    theme = localStorage.getItem("theme");
-  }
-};
-
 const NavBar = () => {
-  const [theme, setTheme] = useState(getStorageTheme());
+  const [theme, setTheme] = useState("light-theme");
 
   const toggleTheme = () => {
-    if (theme === "dark-theme") {
-      setTheme("light-theme");
-    } else {
-      setTheme("dark-theme");
-    }
+    setTheme(theme === "dark-theme" ? "light-theme" : "dark-theme");
   };
 
   useEffect(() => {
-    document.documentElement.className = theme;
-    localStorage.setItem("theme", theme);
+    if (theme === "dark-theme") {
+      document.documentElement.classList.add("dark-theme");
+    } else {
+      document.documentElement.classList.remove("dark-theme");
+    }
   }, [theme]);
 
   return (
