@@ -48,6 +48,7 @@ const Portfolio = () => {
                   ease: "easeInOut",
                   staggerDirection: 0.5,
                 }}
+                className="portfolio__list-icons"
               >
                 <a href={item.demoLink}>
                   <motion.div
@@ -75,10 +76,10 @@ const Portfolio = () => {
               </motion.div>
             </div>
 
-            <div>
+            <div className="portfolio__list-info">
               <h4>{item.title}</h4>
               <p>{item.description}</p>
-              <div>
+              <div className="portfolio__list-type">
                 <p>{item.type}</p>
               </div>
             </div>
